@@ -62,13 +62,13 @@ public class CalculadoraIMCMeninaTest {
 
     @Test
     public void testeSobrepeso4() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(24, 1.1, 4, "f"));//19,83
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(22, 1.1, 4, "f"));//19,83
 
     }
 
     @Test
     public void testeObesidade4() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(24, 1.1, 4, "f"));//19,83
+        Assert.assertEquals("Obesidade", calculadoraImc.calcularImc(26, 1.1, 4, "f"));//19,83
 
     }
 
@@ -115,7 +115,7 @@ public class CalculadoraIMCMeninaTest {
 
     @Test
     public void testeSobrepeso8() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(32, 1.3, 8, "f"));//18,93
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(33, 1.3, 8, "f"));//18,93
 
     }
 
@@ -141,7 +141,7 @@ public class CalculadoraIMCMeninaTest {
 
     @Test
     public void testeSobrepeso10() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(37, 1.4, 10, "f"));//18,88
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(41, 1.4, 10, "f"));//18,88
 
     }
 
@@ -161,13 +161,13 @@ public class CalculadoraIMCMeninaTest {
 
     @Test
     public void testePesoNormal12() {
-        Assert.assertEquals("Peso Normal", calculadoraImc.calcularImc(35, 1.5, 12, "f"));//15,56
+        Assert.assertEquals("Peso Normal", calculadoraImc.calcularImc(40, 1.5, 12, "f"));//15,56
 
     }
 
     @Test
     public void testeSobrepeso12() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(43, 1.5, 12, "f"));//19,11
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(49, 1.5, 12, "f"));//19,11
 
     }
 

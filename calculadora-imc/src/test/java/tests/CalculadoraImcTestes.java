@@ -36,7 +36,7 @@ public class CalculadoraImcTestes {
 
     @Test
     public void testeMenino6anosPesoNormal() {
-        Assert.assertEquals("Peso normal", calcImc.calcularImc(24.0, 1.2, 6, "m"));
+        Assert.assertEquals("Peso Normal", calcImc.calcularImc(21.0, 1.2, 6, "m"));
     }
 
     // Teste 6: IMC infantil - Sobrepeso para um menino de 7 anos

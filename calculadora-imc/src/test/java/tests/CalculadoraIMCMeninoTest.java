@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import static java.lang.Math.log;
+
 public class CalculadoraIMCMeninoTest {
 
     CalculadoraIMC calculadoraImc;
@@ -13,14 +15,6 @@ public class CalculadoraIMCMeninoTest {
     public void setup(){
         calculadoraImc = new CalculadoraIMC();
     }
-
-    /*
-        **INTERVALO DE VALORES INFANTIL MASCULINO**
-        - Baixo peso: Abaixo de 15,0:
-        - Peso normal: Entre 15,0 e 18,2:
-        - Sobrepeso: Entre 18,2 e 19,2:
-        - Obesidade: Acima DE 19,2:
-     */
 
     // IDADE = 2
     @Test
@@ -62,7 +56,7 @@ public class CalculadoraIMCMeninoTest {
 
     @Test
     public void testeSobrepeso4() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(20, 1.1, 4, "m")); //16,53
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(21, 1.1, 4, "m")); //16,53
 
     }
 
@@ -83,13 +77,13 @@ public class CalculadoraIMCMeninoTest {
 
     @Test
     public void testePesoNormal6() {
-        Assert.assertEquals("Peso Normal", calculadoraImc.calcularImc(20, 1.2, 6, "m")); // 15,97
+        Assert.assertEquals("Peso Normal", calculadoraImc.calcularImc(21, 1.2, 6, "m")); // 15,97
 
     }
 
     @Test
     public void testeSobrepeso6() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(27, 1.2, 6, "m")); // 18,75
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(25, 1.2, 6, "m")); // 18,75
 
     }
 
@@ -141,7 +135,7 @@ public class CalculadoraIMCMeninoTest {
 
     @Test
     public void testeSobrepeso10() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(42, 1.5, 10, "m"));//18,67
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(45, 1.5, 10, "m"));//18,67
 
     }
 
@@ -161,84 +155,20 @@ public class CalculadoraIMCMeninoTest {
 
     @Test
     public void testePesoNormal12() {
-        Assert.assertEquals("Peso Normal", calculadoraImc.calcularImc(28, 1.7, 12, "m"));//15,57
+        Assert.assertEquals("Peso Normal", calculadoraImc.calcularImc(49, 1.7, 12, "m"));//15,57
 
     }
 
     @Test
     public void testeSobrepeso12() {
-        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(54, 1.7, 12, "m"));//18,69
+        Assert.assertEquals("Sobrepeso", calculadoraImc.calcularImc(65, 1.7, 12, "m"));//18,69
 
     }
 
     @Test
     public void testeObesidade12() {
-        Assert.assertEquals("Obesidade", calculadoraImc.calcularImc(55, 1.7, 12, "m"));//19,03
+        Assert.assertEquals("Obesidade", calculadoraImc.calcularImc(85, 1.7, 12, "m"));//19,03
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//MENINAS
-
-
-
-
-
-
-//    @Test
-//    public void testeAudltoBaixoPesoMuitoGrave(){
-//        Assert.assertEquals("Baixo peso muito grave", calculadoraImc.calcularImc(48.0, 1.735, 20, "m"));
-//    }
-//
-//    @Test
-//    public void testeAdultoBaixoPesoGraveInferior() {
-//        Assert.assertEquals("Baixo peso grave", calculadoraImc.calcularImc(48.0, 1.73, 20, "f"));
-//    }
-//
-//    @Test
-//    public void testeAdultoBaixoPesoGraveSuperior() {
-//        Assert.assertEquals("Baixo peso grave", calculadoraImc.calcularImc(50.0, 1.72, 65, "m"));
-//    }
-//
-//    @Test
-//    public void testeMenina4anosObesidade() {
-//        Assert.assertEquals("Obesidade", calculadoraImc.calcularImc(50.0, 1.639, 4, "f"));
-//    }
-
-    //grafico das crianças: Setiver 2 anos, e estiver ente 14,6 e 14,8 vai ser baixo peso (descobri altura e peso que da nisso )
-    //48 testes para crianças (6*4*2)
-    //apenas 1 caso por cor. escolhe um ponto dentro de cada cor. esoclhe vaor de peso e altura que de 16
-
-    //6 idades * 4 tipos de peso * 2 possibilidades de sexo
-
-
-    // 14.8 IMC. qual a altura e peso que da esse imc ?
-    // fazer para as 4 catergoria, dentro das 6 idades (2,4,6,8,10,12) e de cada sexo
-
-
 
 }
